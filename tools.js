@@ -44,15 +44,15 @@ export async function enterSection(newSec, setNewSec=undefined) {
     }
     current_section.classList.remove("fade-in");
     current_section.classList.add("fade-out");
-    await sleep(1000)
+    await sleep(400)
     current_section.classList.add("disabled");
     current_section.classList.remove("fade-out");
-    await sleep(250);
+    await sleep(200);
 
     newSec.classList.remove("disabled");
     newSec.classList.remove("fade-out");
     newSec.classList.add("fade-in");
-    setTimeout(() => {newSec.classList.remove("fade-in");}, 1000);
+    setTimeout(() => {newSec.classList.remove("fade-in");}, 400);
 
     setCurrentSection(setNewSec);
     
@@ -61,5 +61,18 @@ export async function enterSection(newSec, setNewSec=undefined) {
         let t = el.getAttribute("data-text");
         el.innerHTML = "";
         reverseAppearText(el, t);
+    }
+}
+
+
+export function textEffect() {
+    const elements = document.getElementsByClassName("text-effect");
+    for(let el of elements) {
+        let array = el.innerHTML.split(" ");
+        let newHTML = "";
+        for (let word of array) {
+            newHTML += '<span class="text-pop">' + word +'</span> ';
+        }
+        el.innerHTML = newHTML;
     }
 }

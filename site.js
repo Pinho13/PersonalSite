@@ -1,5 +1,7 @@
 import * as tools from "./tools.js";
 
+tools.textEffect()
+
 // NAMES
 const names = document.getElementsByClassName("name");
 

@@ -86,3 +86,42 @@
 .button span{
     color: var(--col);
 }
+
+.about-me {
+    margin-top: 10vh;
+    width: 50vw;
+    justify-content: start;
+    font-size: 2rem;
+}
+
+.text-pop {
+    display: inline-block;
+    transition-duration: 200ms;
+    transition-property: scale;
+}
+
+.text-pop:hover {
+    scale: 1.1;
+    text-shadow: 0 0 0.25rem white;
+}
+
+.languages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    margin-right: 0.25rem;
+    margin-top: 5rem;
+}
+
+.languages img {
+    height: 5rem;
+    filter: drop-shadow(0 0 1px white);
+    margin: 0.5rem;
+    transition-duration: 200ms;
+    transition-property: scale;
+}
+
+.languages img:hover {
+    scale: 1.25;
+}
