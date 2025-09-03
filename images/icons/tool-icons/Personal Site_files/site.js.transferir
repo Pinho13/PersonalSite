@@ -29,22 +29,21 @@ const press = document.getElementsByClassName("blinker")[0];
 const clickable = document.getElementsByClassName("anywhere")[0];
 
 clickable.addEventListener("click", () => {tools.htmlEl.style = ""; tools.enterSection(homeSection,optionsSection); tools.lightBackground();});
-clickable.onmousedown = ()=>{press.classList.add("pressed"); tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(73, 70, 70) inset";};
+clickable.onmousedown = ()=>{press.classList.add("pressed"); tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(83, 80, 80) inset";};
 setTimeout(() => {tools.appearText(press, "Press me");}, 500);
 //
 
 // HOME SECTION
 const buttons = document.getElementsByClassName("button");
-buttons[0].addEventListener("click", () => {tools.htmlEl.style = ""; tools.enterSection(sections[0]); tools.lightBackground();});
-buttons[1].addEventListener("click", () => {tools.htmlEl.style = ""; tools.enterSection(sections[1]); tools.lightBackground();});
-buttons[2].addEventListener("click", () => {tools.htmlEl.style = ""; tools.enterSection(sections[2]); tools.lightBackground();});
-buttons[3].addEventListener("click", () => {tools.htmlEl.style = ""; tools.enterSection(sections[3]); tools.lightBackground();});
+buttons[0].addEventListener("click", () => {tools.enterSection(sections[0]); tools.lightBackground();});
+buttons[1].addEventListener("click", () => {tools.enterSection(sections[1]); tools.lightBackground();});
+buttons[2].addEventListener("click", () => {tools.enterSection(sections[2]); tools.lightBackground();});
+buttons[3].addEventListener("click", () => {tools.enterSection(sections[3]); tools.lightBackground();});
 
-buttons[0].onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(73, 70, 70) inset";};
-buttons[1].onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(73, 70, 70) inset";};
-buttons[2].onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(73, 70, 70) inset";};
-buttons[3].onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(73, 70, 70) inset";};
+buttons[0].onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(83, 80, 80) inset";};
+buttons[1].onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(83, 80, 80) inset";};
+buttons[2].onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(83, 80, 80) inset";};
+buttons[3].onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(83, 80, 80) inset";};
 const homeButton = document.getElementsByClassName("home-button")[0];
-homeButton.addEventListener("click", () => {tools.htmlEl.style = ""; tools.enterSection(optionsSection); tools.lightBackground();})
-homeButton.onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(73, 70, 70) inset";};
+homeButton.addEventListener("click", () => {tools.enterSection(optionsSection);})
 //

@@ -1,5 +1,6 @@
-let deleting = null
-export let current_section
+export let htmlEl = document.getElementsByTagName("html")[0];
+let deleting = null;
+export let current_section;
 
 export function setCurrentSection(section) {
   current_section = section;
@@ -75,4 +76,10 @@ export function textEffect() {
         }
         el.innerHTML = newHTML;
     }
+}
+
+export async function lightBackground() {
+    htmlEl.classList.add("light-up");
+    await sleep(250);
+    htmlEl.classList.remove("light-up");    
 }
