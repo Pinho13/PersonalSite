@@ -97,7 +97,7 @@
 
 .text-pop {
     display: inline-block;
-    transition-duration: 200ms;
+    transition-duration: 100ms;
     transition-property: scale;
 }
 
@@ -139,4 +139,11 @@
     border-image: repeating-linear-gradient(89.2deg,black, black 2px, white 2px, white 4px) 60;
     border-block: 0px;
     box-shadow: 0px 0px 5px 0px white;
+    transition-property: scale;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.under-construction:hover {
+    scale: 1.05;
 }
