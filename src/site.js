@@ -48,3 +48,16 @@ const homeButton = document.getElementsByClassName("home-button")[0];
 homeButton.addEventListener("click", () => {tools.htmlEl.style = ""; tools.enterSection(optionsSection); tools.lightBackground();})
 homeButton.onmousedown = ()=>{tools.htmlEl.style.boxShadow = "0px 0px 50px 0px rgb(73, 70, 70) inset";};
 //
+
+
+// MOUSE EFFECT
+const body = document.getElementsByTagName("body")[0];
+let x = 0;
+let y = 0;
+let divVal = 100;
+window.onmousemove = (e) => {
+    x = e.pageX - window.innerWidth/2;
+    y = e.pageY - window.innerHeight/2;
+    body.style.transform = `translateX(${-x/divVal}px) translateY(${-y/divVal}px)`;
+}
+//
